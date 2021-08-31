@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 #
 #euler59 / XOR decryption
-import os,csv,re
+import os,time
+
+# Debut du decompte du temps
+start_time = time.time()
+
 os.chdir("C:/Users/allag/PycharmProjects/Euler/euler_scripts")
 with open("euler59.txt", "r") as txt:
     contenu=txt.read()
@@ -51,3 +55,6 @@ total = 0
 for i in dec_liste:
     total+=ord(i)
 print(total)
+
+# Affichage du temps d execution
+print("Temps d execution : %s secondes ---" % (time.time() - start_time))
