@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 #
 #euler2.py / even fibonacci numbers
-i=1
-j=2
+import time
+
+# Debut du decompte du temps
+start_time = time.time()
+
+liste = [1,1]
 max=4000000
 tot=0
-tot=tot+j
-while i < max or j < max: 
-    i=i+j
-    j=i+j
-    print(i,j)
-    if i%2==0:
-        tot=tot+i 
-    if j%2==0:
-        tot=tot+j
+while liste[-1] < max:
+    liste.append(liste[-1]+liste[-2])
+    if liste[-1]%2==0:
+        tot+=liste[-1]
 print ("total : ", tot)
+
+# Affichage du temps d execution
+print("Temps d execution : %s secondes ---" % (time.time() - start_time))
 
