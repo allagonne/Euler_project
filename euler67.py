@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# euler18.py/maximum path sum I/no bruteforce
+# euler67.py/maximum path sum II/no bruteforce
 import time
 import numpy as np
 
@@ -8,7 +8,7 @@ import numpy as np
 start_time = time.time()
 
 # traitement fichier => array
-f = open("euler18_triangle.txt", 'r')
+f = open("euler67_triangle.txt", 'r')
 triangle_str_list = [row for row in f.read().split("\n")]
 f.close()
 triangle_list = []
@@ -19,6 +19,7 @@ print(triangle_list)
 
 ## main
 max_distance_array = np.full((len(triangle_list[-1]), len(triangle_list[-1])), np.inf)
+print(max_distance_array)
 #init : first and last column = left path + right path
 max_distance_array[0,0] = triangle_list[0][0]
 for i in range(1, len(max_distance_array)):
