@@ -40,3 +40,6 @@ while True:
 
 file.close()
 print(count)
+
+# Affichage du temps d execution
+print("Temps d execution : %s secondes ---" % (time.time() - start_time))
